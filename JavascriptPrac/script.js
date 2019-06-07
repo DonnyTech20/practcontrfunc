@@ -95,6 +95,7 @@ if (job === 'web developer') {
  let webDeveloperQuestion = interviewQuestion('web developer');
 
  webDeveloperQuestion('Donny Techiera');
+ interviewQuestion('UI designer')('Randi');
  
 
 
