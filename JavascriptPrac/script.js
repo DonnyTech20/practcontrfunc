@@ -56,13 +56,14 @@ console.log(obj2.age);
 
 // Functions 
 
-let years = [1975, 1965, 1937, 2005, 1998];
+/* let years = [1975, 1965, 1937, 2005, 1998];
 
- arrayCalc = (arr,fn) => {
+ arrayCalc = (arr, fn) => {
      let arrRes = [];
      for (let i = 0; i < arr.length;
         i++) {
             arrRes.push(fn(arr[i]));
+            console.log(i);
         }
         return arrRes;
  }
@@ -72,6 +73,31 @@ let years = [1975, 1965, 1937, 2005, 1998];
  let ages = arrayCalc(years, calculateAge);
 
  console.log(ages);
+ */
+
+ // Function calling another Function
+
+ interviewQuestion = (job) => {
+if (job === 'web developer') {
+    return (name) => {
+     console.log(` ${name} Please explain what is Javascipt`);
+    }
+} else if (job === 'UI designer') {
+    return (name) => {
+        console.log(` ${name} What is SASS ?`);
+    }
+} else {
+    return (name) => {
+        console.log(` ${name} whats your career ? `);
+    }
+}
+ }
+ let webDeveloperQuestion = interviewQuestion('web developer');
+
+ webDeveloperQuestion('Donny Techiera');
+ 
+
+
 
 
 
