@@ -117,6 +117,56 @@ steve() //? Steve Smith
 steff() //? Steff Hudson
 
 
+// Async func
+
+function fireAfter5Seconds() {
+    return new Promise (fixed => {
+        setTimeout( () => {
+            fixed('isFixed');
+        }, 5000);
+    });
+}
+
+async function asyncCall() {
+console.log('calling');
+let answer = await fireAfter5Seconds();
+console.log(answer);
+}
+
+asyncCall();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
