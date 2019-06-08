@@ -96,7 +96,27 @@ if (job === 'web developer') {
 
  webDeveloperQuestion('Donny Techiera');
  interviewQuestion('UI designer')('Randi');
- 
+
+ // bind 
+ const userOne = {
+     firstName: 'Steve',
+     lastName: 'Smith'
+ }
+ const userTwo = {
+     firstName: 'Steff',
+     lastName: 'Hudson'
+ }
+ const fullNameOfUser = function() {
+     return `${this.firstName}, ${this.lastName}`;
+ }
+
+const steve = fullNameOfUser.bind(userOne);
+const steff = fullNameOfUser.bind(userTwo);
+
+steve() //? Steve Smith
+steff() //? Steff Hudson
+
+
 
 
 
