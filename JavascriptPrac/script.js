@@ -136,6 +136,68 @@ console.log(answer);
 asyncCall();
 
 
+// Global Execution Context
+// Execution Stack
+// understanding undefined key word not declaring a value
+let a;
+
+if(a === undefined) {
+    console.log('a is undefined');
+} else {
+    console.log('a is defined!');
+}
+
+// Variable Environment how they relate in memory
+
+function b() {
+    let myVar;
+    console.log(myVar);
+    
+}
+function a() {
+    let myVar = 2;
+    console.log(myVar);
+    b();
+}
+
+let myVar = 1;
+console.log(myVar);
+a();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
